@@ -57,14 +57,15 @@ class Assignment8{
         m1.multiply(m2);
     }
     static void input(){
-        Scanner sc=new Scanner(System.in);
-        r=sc.nextInt();
-        c=sc.nextInt();
-        a=new float[r][c];
-        System.out.println("Enter the element: ");
-        for(int i=0;i<r;i++){
-            for(int j=0;j<c;j++){
-                a[i][j]=sc.nextFloat();
+        try (Scanner sc = new Scanner(System.in)) {
+            r=sc.nextInt();
+            c=sc.nextInt();
+            a=new float[r][c];
+            System.out.println("Enter the element: ");
+            for(int i=0;i<r;i++){
+                for(int j=0;j<c;j++){
+                    a[i][j]=sc.nextFloat();
+                }
             }
         }
     }
